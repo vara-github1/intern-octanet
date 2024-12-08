@@ -4,6 +4,7 @@ from tkinter.filedialog import askopenfile
 
 # Ask for the PDF file
 book = askopenfile(filetypes=[("PDF files", "*.pdf")], mode='rb')
+
 if book is not None:
     pdfreader = PyPDF2.PdfReader(book)
     pages = len(pdfreader.pages)
